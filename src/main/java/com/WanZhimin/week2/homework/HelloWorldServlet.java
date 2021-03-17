@@ -17,8 +17,8 @@ public class HelloWorldServlet extends HttpServlet {
             throws IOException {
         PrintWriter writer = response.getWriter();
         Date date=new Date();
-        writer.println("Name: "+name+"<br/>");
-        writer.println("ID: "+ID+"<br/>");
+        writer.println("Name: "+ name +"<br/>");
+        writer.println("ID: "+ ID +"<br/>");
         writer.println("Date and Time: "+date.toString()+"<br/>");
     }
 
