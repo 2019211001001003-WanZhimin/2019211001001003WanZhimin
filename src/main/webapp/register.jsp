@@ -8,72 +8,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Register</title>
-    <script>
-        function isPasswordValid() {
-            var password=document.getElementById("password").value;
-            if(password.length<8) {
-                alert("password lenth less than 8:，"+password.length+"/8");
-                document.getElementById("password").style.color="red";
-                return false;
-            }
-            document.getElementById("password").style.color="green";
-            return true;
-        }
-        function isMailValid(){
-            var ex=document.getElementById("mail").value;
-            var atpos=ex.indexOf("@");
-            var dotpos=ex.lastIndexOf(".");
-            if (atpos<1 || dotpos<atpos+2 || dotpos+2>=ex.length){
-                alert("e-mail format wrong");
-                document.getElementById("mail").style.color="red";
-                return false;
-            }
-            document.getElementById("mail").style.color="green";
-            return true;
-        }
-        function isDateValid() {
-            var obj=document.getElementById("birth");
-            var strDate = obj.value;
-            console.log(strDate+"-<")
-            var re = /^(\d{4})-(\d{2})-(\d{2})$/;
-            if (re.test(strDate))//判断日期格式符合YYYY-MM-DD标准
-            {
-                var dateElement = new Date(RegExp.$1, parseInt(RegExp.$2, 10) - 1, RegExp.$3);
-                if (!((dateElement.getFullYear() == parseInt(RegExp.$1)) && ((dateElement.getMonth() + 1) == parseInt(RegExp.$2, 10)) && (dateElement.getDate() == parseInt(RegExp.$3))))//判断日期逻辑
-                {
-                    alert("You can only input Date.(YYYY-MM-DD) !");
-                    document.getElementById("birth").style.color="red";
-                    return false;
-                }
-            } else {
-                alert("You can only input Date.(YYYY-MM-DD)!");
-                document.getElementById("birth").style.color="red";
-                return false;
-            }
-            document.getElementById("birth").style.color="green";
-            return true;
-        }
-        function checkAll() {
-            if(isDateValid()&&isMailValid()&&isPasswordValid()&&document.getElementById("userName").value!=null&&document.getElementById("sex").value!=null) {
-                alert("提交成功!")
-                return true;
-            }
-            alert("提交失败!")
-            return false;
-        }
-    </script>
+    <title>Title</title>
 </head>
 <body>
-<h2>New User Registration!</h2>
-<form action="register" method="post">
-    Username:<input type="text" id="userName"><br>
-    Password:<input type="password" id="psw" name="password" onchange="isPasswordValid()"><br>
-    E-mail:<input type="email" id="mail" name="email" onchange="isMailValid()"><br>
-    Gender:<input type="radio" name="sex" value="male">male
-    <input type="radio" name="sex" value="female">female<br>
-    Birth:<input type="text" id="birth" onchange="isDateValid()"><br>
-    <input type="submit" value="Register"  onclick="checkAll()">
-</form>
+<form>
+    <form method="post" action="register">
+        New User Registration<br/><br/>
+        Username<input type="text" name="name" required="true"><br/><br/>
+        Password<input type="password" name="pwd" required="true" minlength="8"><br/><br/>
+        email<input type="email" name="email" required="true"><br/><br/>
+        email<input type="text" name="email" required="true"><br/><br/>
+        Gender
+        Male<input type="radio">
+        Female<input type="radio"><br/><br/>
+        Date of birth(yyyy-mm-dd)<input type="date" pattern="yyyy-mm-dd" required="true"><br/><br/>
+        Male<input type="radio" name="sex" value="male">
+        Female<input type="radio" name="sex" value="female"><br/><br/>
+        Date of birth(yyyy-mm-dd)<input type="text"  required="true" name="birth"><br/><br/>
+
+        <input type="submit" value="Register">
+    </form>
 </body>
 </html>
