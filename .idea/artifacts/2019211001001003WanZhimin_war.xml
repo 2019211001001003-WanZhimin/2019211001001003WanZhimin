@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="2019211001001003WanZhimin:war">
+  <artifact type="exploded-ear" name="2019211001001003WanZhimin:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="root">
       <element id="artifact" artifact-name="2019211001001003WanZhimin:war exploded" />
