@@ -1,4 +1,4 @@
-package com.WanZhimin.week2.homework;
+package com.WanZhimin.week2;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

@@ -66,7 +66,7 @@
 </head>
 <body>
 <h2>New User Registration!</h2>
-<form action="" method="post">
+<form action="register" method="post">
     Username:<input type="text" id="userName"><br>
     Password:<input type="password" id="psw" name="password" onchange="isPasswordValid()"><br>
     E-mail:<input type="email" id="mail" name="email" onchange="isMailValid()"><br>
