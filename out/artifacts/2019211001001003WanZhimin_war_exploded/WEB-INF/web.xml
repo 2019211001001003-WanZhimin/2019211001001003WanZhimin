@@ -5,15 +5,15 @@
          version="4.0">
     <servlet>
         <servlet-name>WZMJSP</servlet-name>
-        <servlet-class>com.WanZhimin.week2.homework.HelloWorldServlet</servlet-class>
+        <servlet-class>com.WanZhimin.week2.HelloWorldServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LifeCycleServlet</servlet-name>
-        <servlet-class>com.WanZhimin.week3.homework.LifeCycleServlet</servlet-class>
+        <servlet-class>com.WanZhimin.week3.LifeCycleServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.WanZhimin.week3.homework.RegisterServlet</servlet-class>
+        <servlet-class>com.WanZhimin.week3.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>WZMJSP</servlet-name>
