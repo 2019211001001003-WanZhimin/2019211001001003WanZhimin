@@ -21,10 +21,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LifeCycleServlet</servlet-name>
-        <url-pattern>life</url-pattern>
+        <url-pattern>/life</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>register</url-pattern>
+        <url-pattern>/register</url-pattern>
     </servlet-mapping>
 </web-app>
