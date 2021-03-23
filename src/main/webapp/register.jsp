@@ -11,7 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<form>
     <form method="post" action="register">
         New User Registration<br/><br/>
         Username<input type="text" name="name" required="true"><br/><br/>
