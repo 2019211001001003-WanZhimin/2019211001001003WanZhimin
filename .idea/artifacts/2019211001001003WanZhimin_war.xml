@@ -1,7 +1,13 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-ear" name="2019211001001003WanZhimin:war">
+  <artifact type="war" name="2019211001001003WanZhimin:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="root">
+    <properties id="maven-jee-properties">
+      <options>
+        <module>2019211001001003WanZhimin</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="WanZhimin2019211001001003-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="2019211001001003WanZhimin:war exploded" />
     </root>
   </artifact>

@@ -11,21 +11,23 @@
     <title>Title</title>
 </head>
 <body>
-    <form method="post" action="register">
-        New User Registration<br/><br/>
-        Username<input type="text" name="name" required="true"><br/><br/>
-        Password<input type="password" name="pwd" required="true" minlength="8"><br/><br/>
-        email<input type="email" name="email" required="true"><br/><br/>
-        email<input type="text" name="email" required="true"><br/><br/>
-        Gender
-        Male<input type="radio">
-        Female<input type="radio"><br/><br/>
-        Date of birth(yyyy-mm-dd)<input type="date" pattern="yyyy-mm-dd" required="true"><br/><br/>
-        Male<input type="radio" name="sex" value="male">
-        Female<input type="radio" name="sex" value="female"><br/><br/>
-        Date of birth(yyyy-mm-dd)<input type="text"  required="true" name="birth"><br/><br/>
+        <form method="post" action="register">
+            <span style="color: #FFA500"> New User Registration</span><br/><br/>
+            <span style="color:#FFA500">id</span> <input type="text" name="id" required="true" style="background-color: #EAEAAE"><br/><br/>
+            <span style="color:#FFA500">Username</span> <input type="text" name="name" required="true" style="background-color: #EAEAAE"><br/><br/>
+            <span style="color: #FFA528">Password</span> <input type="password" name="password" maxlength="8" style="background-color: #EAEAAE"><br/><br/>
+            <span style="color: #FFA528">Email</span><input type="email" name="email" required="true"style="background-color: #EAEAAE"><br/><br/>
+            <span style="color: #FFA528">Gender</span>
+            <label for="1">
+                <input type="radio" name="gender" value="male" id="1"/> <span style="color: #D2B48C">Male</span>
+            </label>
 
-        <input type="submit" value="Register">
-    </form>
+            <label for="2">
+                <input type="radio" name="gender" value="female" id="2"/> <span style="color: #D2B48C">Female</span>
+            </label>
+            <br/><br/>
+            <span style="color: #FFA528">Date of birth(yyyy-mm-dd)</span><input type="date"name="date"  pattern="yyyy-mm-dd" required="true"style="background-color: #EAEAAE"><br/><br/>
+            <input type="submit" value="register"style="background-color: #EAEAAE">
+        </form>
 </body>
 </html>

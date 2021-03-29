@@ -12,12 +12,13 @@ public class LifeCycleServlet extends HttpServlet {
     }
 
     public void init(){
+
         System.out.println("I am in init().");
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("I am in doGet().");
+        System.out.println("I am in doGet() --> doGet().");
     }
 
     @Override
