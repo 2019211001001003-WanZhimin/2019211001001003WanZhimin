@@ -51,7 +51,6 @@
         <param-value>admin123456789</param-value>
     </context-param>
 
-
     <servlet-mapping>
         <servlet-name>WZMJSP</servlet-name>
         <url-pattern>/hello</url-pattern>
