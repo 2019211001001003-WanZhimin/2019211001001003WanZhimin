@@ -13,6 +13,13 @@
 <body>
 <%@include file="header.jsp" %>
 <h1>Login<br/> </h1>
+
+<%
+    if(!(request.getAttribute("message") == null)){
+        out.println("<h3>"+request.getAttribute("message")+"</h3>");
+    }
+%>
+
 <form method="post" action="${pageContext.request.contextPath}/login">
     <p>Username:<input type="text" name="name"/></p>
     <p>Password:<input type="password" name="password"/></p>

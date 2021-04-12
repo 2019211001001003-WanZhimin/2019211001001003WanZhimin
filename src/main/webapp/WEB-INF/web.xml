@@ -54,7 +54,10 @@
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>com.WanZhimin.week5.LoginServlet</servlet-class>
 </servlet>
-
+<servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.WanZhimin.week6.SearchServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>WZMJSP</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -79,4 +82,8 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/Login</url-pattern>
 </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
 </web-app>
