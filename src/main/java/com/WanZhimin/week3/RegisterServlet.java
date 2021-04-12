@@ -14,7 +14,8 @@ public class RegisterServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        /*String driver = getServletConfig().getServletContext().getInitParameter("driver");
+        /*
+        String driver = getServletConfig().getServletContext().getInitParameter("driver");
         String url = getServletConfig().getServletContext().getInitParameter("url");
         String username = getServletConfig().getServletContext().getInitParameter("username");
         String password = getServletConfig().getServletContext().getInitParameter("password");

@@ -43,8 +43,10 @@ public class LoginServlet extends HttpServlet {
                 ps.setString(2,password);
                 ResultSet rs = ps.executeQuery();
                 if(rs.next()){
-                    /*writer.println("Login Success!!!");
-                    writer.println("Welcome "+name+".");*/
+                    /*
+                    writer.println("Login Success!!!");
+                    writer.println("Welcome "+name+".");
+                    */
                     PrintWriter printWriter =response.getWriter();
 
                     request.setAttribute("username",rs.getString(1));
