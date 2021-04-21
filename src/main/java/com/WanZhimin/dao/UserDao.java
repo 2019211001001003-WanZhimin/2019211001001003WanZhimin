@@ -10,7 +10,7 @@ public class UserDao implements  IUserDao {
     public boolean saveUser(Connection con, User user) throws SQLException {
         try{
             Statement createDbStatement = con.createStatement();
-            String dbRequire="insert into usertable(username,password,mail,gender,birthDate) values('"+user.getUsername()+"','"+user.getPassword()+"','"+user.getEmail()+"','"+user.getGender()+"','"+user.getBirthDate()+"')";
+            String dbRequire="insert into usertable(username,password,email,gender,birthDate) values('"+user.getUsername()+"','"+user.getPassword()+"','"+user.getEmail()+"','"+user.getGender()+"','"+user.getBirthDate()+"')";
             createDbStatement.executeUpdate(dbRequire);
             System.out.println("insert "+user.toString()+"success");
             return true;
@@ -36,7 +36,7 @@ public class UserDao implements  IUserDao {
     public int updateUser(Connection con, User user) throws SQLException {
         try{
             Statement createDbStatement = con.createStatement();
-            String dbRequire="update usertable set username='"+user.getUsername()+"',password='"+user.getPassword()+"',mail='"+user.getEmail()+"',gender='"+user.getGender()+"',birth='"+user.getBirthDate()+"' where id="+user.getId();
+            String dbRequire="update usertable set username='"+user.getUsername()+"',password='"+user.getPassword()+"',email='"+user.getEmail()+"',gender='"+user.getGender()+"',birth='"+user.getBirthDate()+"' where id="+user.getId();
             createDbStatement.executeUpdate(dbRequire);
             System.out.println("update "+user.getId()+"success");
             return 1;
