@@ -16,7 +16,7 @@ import java.sql.SQLException;
         urlPatterns = {"/jdbc"},
         initParams = {
                 @WebInitParam(name="driver",value="com.microsoft.sqlserver.jdbc.SQLServerDriver"),
-                @WebInitParam(name="url",value="jdbc:sqlserver://localhost;databaseName=userjmy;"),
+                @WebInitParam(name="url",value="jdbc:sqlserver://localhost;databaseName=userdb;"),
                 @WebInitParam(name="username",value="sa"),
                 @WebInitParam(name="password",value="123456"),
         },loadOnStartup = 1
@@ -25,23 +25,23 @@ import java.sql.SQLException;
 public class JDBCServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url = "jdbc:sqlserver://localhost:databaseName=userdb";
-        String username = "sa";
-        String password = "admin123456789";
-
-        try{
-            Class.forName(driver);
-            Connection con = DriverManager.getConnection(url,username,password );
-            System.out.println("-->"+con);
-        }catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
+        doPost(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String driver = getServletConfig().getServletContext().getInitParameter("driver");
+        String url = getServletConfig().getServletContext().getInitParameter("url");
+        String username = getServletConfig().getServletContext().getInitParameter("username");
+        String password = getServletConfig().getServletContext().getInitParameter("password");
 
+        try{
+            Class.forName(driver);
+            Connection connection = DriverManager.getConnection(url,username,password);
+            System.out.println("init()" + connection);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
 

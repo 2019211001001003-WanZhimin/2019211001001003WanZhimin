@@ -38,11 +38,11 @@
     }
 %>
 
-<form method="post" action="${pageContext.request.contextPath}/Login">
-    <p>Username:<input type="text" name="name" value="<%=username%>"></p>
+<form method="post" action="${pageContext.request.contextPath}/login">
+    <p>Username:<input type="text" name="username" value="<%=username%>"></p>
     <p>Password:<input type="password" name="password" value="<%=password%>"></p>
     <input type="checkbox" name="rememberMe" value="1"<%=rememberValue.equals("1")?"checked":""%>checked/>RememberMe<br/>
-    <input type="submit" value="Login"/>
+    <input type="submit" value="Login">
 </form>
 <%@include file="footer.jsp" %>
 </body>

@@ -10,7 +10,7 @@ import java.sql.*;
 
 
 public class RegisterServlet extends HttpServlet {
-    Connection con = null;
+    Connection con =null;
     @Override
     public void init() throws ServletException {
         super.init();
@@ -43,8 +43,8 @@ public class RegisterServlet extends HttpServlet {
         username = request.getParameter("username");
         password = request.getParameter("password");
         email = request.getParameter("email");
-        gender = request.getParameter("sex");
-        birthDate = request.getParameter("birthdate");
+        gender = request.getParameter("gender");
+        birthDate = request.getParameter("birthDate");
 
         try {
             Statement st = con.createStatement();
