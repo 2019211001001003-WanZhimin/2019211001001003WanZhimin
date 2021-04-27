@@ -51,7 +51,7 @@
       %>
    <br> <a href="logout">Logout</a>
       <%
-
+          }
       %>
   <br><a href="#">My Cart</a><br/>
 <a href="register.jsp">Register Here</a>
