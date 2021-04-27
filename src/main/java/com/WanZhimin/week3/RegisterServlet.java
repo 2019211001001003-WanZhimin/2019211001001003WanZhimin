@@ -38,18 +38,18 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id,name,password,email,gender,birthdate;
+        String id,username,password,email,gender,birthDate;
         id = request.getParameter("id");
-        name = request.getParameter("name");
+        username = request.getParameter("username");
         password = request.getParameter("password");
         email = request.getParameter("email");
         gender = request.getParameter("sex");
-        birthdate = request.getParameter("birthdate");
+        birthDate = request.getParameter("birthdate");
 
         try {
             Statement st = con.createStatement();
             String sql = "insert into usertable(username,password,email,gender,birthdate)" +
-                    "values('" + name + "','" + password + "','" + email + "','" + gender + "','" + birthdate +"')";
+                    "values('" + username + "','" + password + "','" + email + "','" + gender + "','" + birthDate +"')";
             System.out.println("sql " + sql);
 
             int n = st.executeUpdate(sql);
