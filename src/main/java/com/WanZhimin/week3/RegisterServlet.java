@@ -32,19 +32,17 @@ public class RegisterServlet extends HttpServlet {
         @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doPost(request, response);
+        request.getRequestDispatcher("WEB-INF/views/register.jsp").forward(request,response);
 
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id,username,password,email,gender,birthDate;
-        id = request.getParameter("id");
-        username = request.getParameter("username");
-        password = request.getParameter("password");
-        email = request.getParameter("email");
-        gender = request.getParameter("gender");
-        birthDate = request.getParameter("birthDate");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String gender = request.getParameter("gender");
+        String birthDate = request.getParameter("birthDate");
 
         try {
             Statement st = con.createStatement();
@@ -57,11 +55,23 @@ public class RegisterServlet extends HttpServlet {
 
             sql = "select * from usertable";
             ResultSet rs = st.executeQuery(sql);
-            PrintWriter printWriter = response.getWriter();
+            PrintWriter out = response.getWriter();
 
-            response.sendRedirect("login.jsp");
+            //request.setAttribute("rsname",rs);
+            //request.getRequestDispatcher("userList.jsp").forward(request,response);
+
+            response.sendRedirect("login");
 
         } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+    @Override
+    public void destroy(){
+        super.destroy();
+        try{
+            con.close();
+        }catch (SQLException throwables){
             throwables.printStackTrace();
         }
     }
