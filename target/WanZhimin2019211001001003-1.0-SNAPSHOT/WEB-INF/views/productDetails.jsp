@@ -1,4 +1,3 @@
-
 	<%@include file="header.jsp" %>
 	<section>
 		<div class="container">
@@ -9,8 +8,7 @@
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							
 							<!-- loop_start -->
-							
-							
+
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="<%=basePath %>shop?categoryId=1?">Category Type</a></h4>

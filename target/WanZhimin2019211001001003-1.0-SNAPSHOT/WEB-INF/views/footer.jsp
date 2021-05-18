@@ -3,6 +3,7 @@ String path1 = request.getContextPath();
 String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path1+"/";
 //.println(basePath);
 %>
+
 <footer id="footer"><!--Footer-->
 		<div class="footer-top">
 			<div class="container">

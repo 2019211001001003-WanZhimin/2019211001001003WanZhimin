@@ -9,6 +9,7 @@
     if(!(request.getAttribute("message")==null)){
     out.println("<h3>"+request.getAttribute("message")+"</h3>");
 }%>
+
 <%
     Cookie[] cookies=request.getCookies();
     String username="";
@@ -64,3 +65,4 @@ style="width: 15px; height: 15px; display:inline;" name="gender" value="male" ch
 		</div>
 	</section><!--/form-->
 <%@include file="footer.jsp"%>
+

@@ -114,6 +114,3 @@
 	<br/>
 	<%@include file="footer.jsp" %>
 	
-
-  
-  
