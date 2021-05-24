@@ -67,6 +67,5 @@ public class AddProductServlet extends HttpServlet {
             throwables.printStackTrace();
         }
 
-
     }
 }

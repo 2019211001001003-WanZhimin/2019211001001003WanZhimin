@@ -23,7 +23,8 @@ public class UpdateUserServlet extends HttpServlet {
         con = (Connection) getServletContext().getAttribute("con");
     }
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         //request.getRequestDispatcher("updateUser.jsp").forward(request,response);
         doPost(request, response);
     }
