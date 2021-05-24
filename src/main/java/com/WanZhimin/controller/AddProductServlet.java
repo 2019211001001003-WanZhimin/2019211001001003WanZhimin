@@ -18,9 +18,13 @@ import java.util.List;
 @MultipartConfig(maxFileSize = 16177215)
 public class AddProductServlet extends HttpServlet {
     Connection con = null;
+
+    @Override
     public void init(){
+
         con = (Connection)getServletContext().getAttribute("con");
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
