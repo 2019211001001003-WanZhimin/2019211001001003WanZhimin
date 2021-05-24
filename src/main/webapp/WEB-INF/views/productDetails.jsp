@@ -113,7 +113,6 @@
 								<div class="col-sm-12">
 									
 									<p>${p.productDescription}</p>
-								
 								</div>
 							</div>
 							
