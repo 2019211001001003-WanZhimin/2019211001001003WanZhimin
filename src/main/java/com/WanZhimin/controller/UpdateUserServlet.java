@@ -16,6 +16,7 @@ import java.util.Date;
 
 @WebServlet(name = "UpdateUserServlet", value = "/updateUserServlet")
 public class UpdateUserServlet extends HttpServlet {
+
     Connection con = null;
 
     @Override
@@ -48,6 +49,7 @@ public class UpdateUserServlet extends HttpServlet {
         user.setBirthDate(DateUtil.convertStringToUtil(birthDate));
         //System.out.println(user.toString());
         UserDao userDao = new UserDao();
+
         try{
             int n = userDao.updateUser(con,user);
             User updateUser = userDao.findById(con,id);
