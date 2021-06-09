@@ -26,37 +26,32 @@ public class UpdateUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/views/updateUser.jsp").forward(request,response);
+        //request.getRequestDispatcher("updateUser.jsp").forward(request,response);
+        doPost(request, response);
     }
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.valueOf(request.getParameter("id"));
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         String gender = request.getParameter("gender");
-        String birthDate = request.getParameter("birthDate");
+        String date = request.getParameter("birthDate");
+        int id = Integer.parseInt(request.getParameter("id"));
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date date1 = sdf.parse(date);
+            java.sql.Date birthdate = new java.sql.Date(date1.getTime());
 
-            User user = new User();
-            user.setId(id);
-            user.setUsername(username);
-            user.setPassword(password);
-            user.setEmail(email);
-            user.setGender(gender);
-            user.setBirthDate(DateUtil.convertStringToUtil(birthDate));
+            User user = new User(id,username,password,email,gender,birthdate);
             //System.out.println(user.toString());
             UserDao userDao = new UserDao();
-            try{
-                int n = userDao.updateUser(con,user);
-                User updateUser = userDao.findById(con,id);
-                HttpSession session = request.getSession();
-                session.removeAttribute("user");
-                session.setAttribute("user",updateUser);
-                request.getRequestDispatcher("accountDetails").forward(request,response);
-        } catch (SQLException throwables) {
+
+            userDao.updateUser(con,user);
+        } catch (SQLException | ParseException throwables) {
             throwables.printStackTrace();
         }
-
+        request.getRequestDispatcher("updateUser.jsp").forward(request,response);
     }
 }
