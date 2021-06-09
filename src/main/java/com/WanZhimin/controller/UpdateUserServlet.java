@@ -13,6 +13,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 @WebServlet(name = "UpdateUserServlet", value = "/updateUserServlet")
 public class UpdateUserServlet extends HttpServlet {
     Connection con = null;
