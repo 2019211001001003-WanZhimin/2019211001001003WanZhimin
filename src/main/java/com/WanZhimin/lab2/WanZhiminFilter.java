@@ -4,7 +4,6 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-
 @WebFilter(filterName = "WZMFilter")
 public class WanZhiminFilter implements Filter {
     public void destroy() {

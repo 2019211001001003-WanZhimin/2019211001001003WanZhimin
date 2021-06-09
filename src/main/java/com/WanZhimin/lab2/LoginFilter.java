@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
 @WebFilter(filterName = "LoginFilter",urlPatterns = {"/lab2/welcome.jsp"})
 public class LoginFilter implements Filter {
 
