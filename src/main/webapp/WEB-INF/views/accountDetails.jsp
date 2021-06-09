@@ -36,7 +36,6 @@
 			<div class="table-responsive col-sm-12">
 
 				<table class="table table-condensed">
-
 					<thead>
 					<tr >
 						<td><strong>Order ID</strong></td>
