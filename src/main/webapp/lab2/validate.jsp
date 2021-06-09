@@ -28,7 +28,7 @@
 %>
 <%
     // todo 6: print username or password error message
-    out.println("username or password error message");
+    out.println("Username Password Error ");
 %>
 <%--todo 7: use jsp:include login.jsp page --%>
 <jsp:include page="login.jsp"/>
