@@ -16,9 +16,7 @@ import java.util.Date;
 
 @WebServlet(name = "UpdateUserServlet", value = "/updateUserServlet")
 public class UpdateUserServlet extends HttpServlet {
-
     Connection con = null;
-
     @Override
     public void init() throws ServletException {
         super.init();
